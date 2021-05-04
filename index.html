@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetProject</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="budget-head">
+        <div class="budget-content">
+            <div class="budget-heading">
+                Available Budget in <span id="monthyear"></span> :
+            </div>
+            <div class="budget-total" id="budgettot">-0.00</div>
+            <div class="budget-plus clearfix">
+                <div class="text">Income</div>
+                <div class="value-per">
+                    <div class="value" id="incval">
+                        +0.00
+                    </div>
+                    <div class="per" >
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="budget-minus clearfix">
+                <div class="text">Expenses</div>
+                <div class="value-per">
+                    <div class="value" id="expval">
+                        -0.00
+                    </div>
+                    <div class="per" id="exper">
+                        --
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="budget-section">
+        <div class="form">
+            <div class="form-content">
+                <select class="form-select" id="incexp" name="incexp">
+                    <option value="inc">+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" id="description" name="description" class="form-text" placeholder="Enter Description...">
+                <input type="number" id="amt" name="amt" class="form-number" placeholder="Value">
+                <button id="addbtn" class="form-btn"><i class="far fa-check-circle"></i></button>
+            </div>
+        </div>
+        <div class="container clearfix">
+            <div class="container-income">
+                <h2 class="income-title">Income</h2>
+                <div class="incom-content" id="incomes">
+                    <!-- <div class="content clearfix">
+                        <div class="content-data">A</div>
+                        <div class="value-btn clearfix">
+                            <div class="content-value">
+                                +1.00
+                            </div>
+                            <div class="delete">
+                            <button class="content-btn"><i class="far fa-times-circle"></i></button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="container-expenses">
+                <h2 class="expenses-title">Expenses</h2>
+                <div class="expenses-content" id="expensess">
+                    <!-- <div class="content clearfix">
+                        <div class="content-data">A</div>
+                        <div class="value-btn clearfix">
+                            <div class="content-value">
+                                +1.00
+                            </div>
+                            <div class="content-per">
+                                100%
+                            </div>
+                            <div class="delete">
+                            <button class="content-btn"><i class="far fa-times-circle"></i></button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
